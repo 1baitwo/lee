@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css2选择器</title>
+  </head>
+  <style>
+    /*比较级 ！important > id(100)> class（10）> 元素（1）
+    相同则后面覆盖前面 */
+    /* 1层级 */
+    .box h1 {
+      color: aquamarine;
+    }
+    /* 2组合选择器 */
+    .box,
+    hi {
+    }
+    /* 3伪类选择器 鼠标在会变色 */
+    .box:hover {
+      background-color: blue;
+    }
+    /* 4伪元素选择器  添加文字*/
+    h2::before {
+      content: "-----";
+    }
+    h2::after {
+      centent: "-----";
+    }
+    h2::after,
+    h2::before {
+      content: "----";
+      color: brown;
+    }
+  </style>
+  <body>
+    <!-- .box+tab会生成以class选择器 -->
+    <div class="box">
+      <h1>hi</h1>
+      <p>hello</p>
+    </div>
+    <h2>好的</h2>
+  </body>
+</html>
